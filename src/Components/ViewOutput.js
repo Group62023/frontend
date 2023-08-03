@@ -51,7 +51,7 @@ class ViewOutput extends Component {
     return (
       <div className="container">
         <form style={customStyle} onSubmit={this.handleSubmit}>
-          <h2>INPUT DATA </h2>
+          <h2>View Submitted Cases </h2>
           <label>
             Mobile Number Affected
             <input
