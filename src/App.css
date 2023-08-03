@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: forestgreen;
+  background-color: rgb(3, 130, 3);
 }
 
 .App-logo {
@@ -24,12 +24,19 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+table, th, td {
+  border: 1px solid black;
+  font-size:medium;
+  padding: 0.5rem;
+  background-color: rgb(111, 175, 147);
+}
 .App-background {
 background-color: forestgreen;
 }
 .App-link {
   color: #61dafb;
 }
+
 
 @keyframes App-logo-spin {
   from {

@@ -20,9 +20,9 @@ function App() {
           <Route path="/ViewOutput" element={<ViewOutput/>}></Route>
           <Route path="/UpdateProgress/:id" element={<UpdateProgress/>}></Route>
                   </Routes>
-                  <footer/>
-              </div>
+           </div>
                   </div>
+                  
     
   );
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 const customStyle = {
   width: "10000px",
-  margin: "100",
+  margin: "500",
   color: "black",
   label: "center",
 };
@@ -32,14 +32,21 @@ class ReportCase extends Component {
     event.preventDefault();
     const { mobileno, fraudtype, comment } = this.state;
     axios
-      .post("http://localhost:3001/fraudcases", {
-        mobileno: mobileno,
-        fraudtype: fraudtype,
-        comment: comment,
-      },configoptions)
+      .post(
+        "http://localhost:3001/fraudcases",
+        {
+          mobileno: mobileno,
+          fraudtype: fraudtype,
+          comment: comment,
+        },
+        configoptions
+      )
       .then((response) => {
-        console.log(response);
-        alert(response);
+        //console.log(response);
+        alert(response.data.caselist);
+        window.location = "/ViewOutput";
+
+        // alert(response);
         // this.props.history.push("/");
       })
       .catch((error) => {
@@ -51,7 +58,8 @@ class ReportCase extends Component {
     return (
       <div className="container">
         <form style={customStyle} onSubmit={this.handleSubmit}>
-          <h2>INPUT DATA </h2>
+          <h2>CAPTURE BELOW DETAILS TO REPORT </h2>
+          <hr />
           <label>
             Mobile Number Affected
             <input
@@ -65,7 +73,7 @@ class ReportCase extends Component {
           <br />
 
           <label>
-            Fraud Type
+            Type Fraud
             <input
               name="fraudtype"
               type="text"
@@ -85,9 +93,11 @@ class ReportCase extends Component {
               className="form-control"
             />
           </label>
+          <hr />
           <br />
           <input type="submit" value="SUBMIT" className="btn btn-primary" />
         </form>
+        <br />
       </div>
     );
   }
