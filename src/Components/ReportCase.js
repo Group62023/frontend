@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-const customStyle = {
-  width: "10000px",
-  margin: "500",
-  color: "black",
-  label: "center",
-};
 
+//const navigate = useNavigate()
 class ReportCase extends Component {
   constructor(props) {
     super(props);
@@ -57,47 +52,51 @@ class ReportCase extends Component {
   render() {
     return (
       <div className="container">
-        <form style={customStyle} onSubmit={this.handleSubmit}>
-          <h2>CAPTURE BELOW DETAILS TO REPORT </h2>
-          <hr />
-          <label>
-            Mobile Number Affected
-            <input
-              name="mobileno"
-              type="text"
-              value={this.state.mobileno}
-              onChange={this.handleChange}
-              className="form-control"
-            />
-          </label>
-          <br />
+        <section>
+                    <form onSubmit={this.handleSubmit}>
+                       <hr />
+            <label>
+              Mobile Number Affected
+              <input
+                name="mobileno"
+                type="text"
+                value={this.state.mobileno}
+                onChange={this.handleChange}
+                className="form-control"
+              />
+            </label>
+            <br />
 
-          <label>
-            Type Fraud
-            <input
-              name="fraudtype"
-              type="text"
-              value={this.state.fraudtype}
-              onChange={this.handleChange}
-              className="form-control"
-            />
-          </label>
-          <br />
-          <label>
-            Comment
-            <input
-              name="comment"
-              type="text"
-              value={this.state.comment}
-              onChange={this.handleChange}
-              className="form-control"
-            />
-          </label>
-          <hr />
-          <br />
-          <input type="submit" value="SUBMIT" className="btn btn-primary" />
-        </form>
-        <br />
+            <label>
+              Type Fraud
+              <input
+                name="fraudtype"
+                type="text"
+                value={this.state.fraudtype}
+                onChange={this.handleChange}
+                className="form-control"
+              />
+            </label>
+            <br />
+            <label>
+              Comment
+              <input
+                name="comment"
+                type="text"
+                value={this.state.comment}
+                onChange={this.handleChange}
+                className="form-control"
+              />
+            </label>
+            <hr />
+            <br />
+
+            <label>Click to Submit Case</label>
+            <br />
+            <input type="submit" value="SUBMIT" className="btn btn-primary" />
+            <hr />
+          </form>
+        </section>
       </div>
     );
   }

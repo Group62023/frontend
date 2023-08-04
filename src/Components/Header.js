@@ -1,17 +1,27 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import logo from "../Components/images/logo.png";
+//import { Navbar} from "react-router-dom";
 // To use routing functionalities
 
-class Header extends Component {
-  render() {
-    return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"></a>
-        <div>
-          <h1>SAFARICOM FRAUD CASE REPORT</h1>
-        </div>
-      </nav>
-    );
-  }
-}
-export default Header;
+const Navbar = () => {
+  return (
+    <nav>
+      <h2>
+        {" "}
+        <img
+          src={logo}
+          width="200"
+          height="100"
+          className="logo"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+          alt=""
+        />
+        FRAUD REPORTING 
+      </h2>
+    </nav>
+  );
+};
+
+export default Navbar;

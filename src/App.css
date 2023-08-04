@@ -24,11 +24,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-table, th, td {
+table, th, td ,th ,tr {
   border: 1px solid black;
   font-size:medium;
   padding: 0.5rem;
-  background-color: rgb(111, 175, 147);
+  background-color: rgba(236, 240, 237, 0);
+  border-color: inherit;
+  border-style: solid;
+  border-width: 5;
 }
 .App-background {
 background-color: forestgreen;

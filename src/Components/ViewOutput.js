@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
-const customStyle = {
+/*const customStyle = {
   width: "10000px",
   margin: "100",
   color: "black",
   label: "center",
-};
+};*/
 
 class ViewOutput extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class ViewOutput extends Component {
     var returncases = this.state.cases;
     return (
       <div className="container">
-        <h1>VIEW REPORTED CASES</h1>
+       <h2>Reported Cases</h2> 
         <table>
           {returncases.map((mycase) => (
             <tr>
